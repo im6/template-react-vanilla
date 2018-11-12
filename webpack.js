@@ -20,14 +20,12 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'style-loader',
-          },
+          'style-loader',
           {
             loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader'
+            options: {
+              modules: true,
+            }
           }
         ]
       },
