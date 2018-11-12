@@ -1,0 +1,24 @@
+{
+  "name": "js_whiteboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/im6/js_whiteboard.git",
+  "author": "im6 <ee2win@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --progress --open --profile --colors --config webpack.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "postcss-loader": "^3.0.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

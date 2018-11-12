@@ -1,2 +1,6 @@
 # js_whiteboard
-whiteboard for es6 babel and react.js
+## support
+- babel/ES2015
+- react
+- postcss
+- webpack
