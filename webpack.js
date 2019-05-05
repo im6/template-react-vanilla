@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   watch: true,
   mode: "development",
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
   },
@@ -49,11 +49,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("development")
-      }
-    }),
   ],
   devServer: {
     contentBase: "./public",  // set "public" path, relative to root
