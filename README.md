@@ -1,4 +1,6 @@
-# js_whiteboard(react.js)
+# js_whiteboard
+
+react.js starter project
 
 ## QuickStart
 
