@@ -1,6 +1,6 @@
-# js_whiteboard
+# react vanilla starter
 
-react.js starter project
+react.js starter project with nothing else.
 
 ## QuickStart
 
