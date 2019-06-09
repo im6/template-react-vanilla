@@ -1,8 +1,8 @@
 {
-  "name": "js_whiteboard",
+  "name": "template-react-vanilla",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/im6/js_whiteboard.git",
+  "repository": "https://github.com/im6/template-react-vanilla.git",
   "author": "im6 <ee2win@gmail.com>",
   "license": "MIT",
   "scripts": {
