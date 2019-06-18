@@ -1,8 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Foo from './bundle';
-debugger
-storiesOf('Bundle/Foo', module)
-  .add('default', () => (
-    <Foo />
-  ))
+import { Foo, Bar } from './bundle'
+
+storiesOf('Bundle', module)
+  .add('Foo', () => {
+    return <Foo />
+  })
+  .add('Bar', () => {
+    return <Bar />
+  })

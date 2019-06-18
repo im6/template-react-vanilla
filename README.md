@@ -1,12 +1,13 @@
-# react vanilla starter
+# template-react-vanilla
 
-react.js starter project with nothing else.
+template for react component library
 
 ## QuickStart
 
 ```sh
 yarn install
 npm start
+npm run build
 ```
 
 ## support
@@ -14,5 +15,6 @@ npm start
 - babel/ES2015
 - react
 - postcss
-- webpack
+- rollup
 - yarn
+- storybook
