@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './style.css';
+import style from './style.scss';
 
 class Foo extends React.Component{
   constructor(prop){
@@ -16,7 +16,6 @@ class Foo extends React.Component{
   }
 
   render(){
-
     return <div>
       <input value={this.state.value} onChange={this.onChange} />
       <h1 className={style.red}>Hello from { this.state.value }</h1>

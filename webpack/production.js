@@ -1,32 +1,31 @@
-"use strict";
+
 const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  watch: true,
-  mode: "development",
-  devtool: 'cheap-module-eval-source-map',
+  mode: "production",
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   entry: [
-    './src/index.jsx',
-    'webpack/hot/only-dev-server',
-    'webpack-dev-server/client?http://localhost:3000',
+    './src/index.js'
   ],
   module:{
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: {
+                localIdentName: '[hash:base64:5]',
+              },
             }
-          }
+          },
+          'sass-loader'
         ]
       },
       {
@@ -43,19 +42,9 @@ module.exports = {
   },
   output: {
     publicPath: '/',
-    path: path.join(__dirname, '../public'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, '../dist'),
+    filename: 'bundle.js',
+    libraryTarget: 'umd',
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-  ],
-  devServer: {
-    contentBase: "./public",  // set "public" path, relative to root
-    noInfo: true,
-    hot: true,
-    inline: true,
-    port: "3000",
-    host: "localhost",
-  }
+  plugins: []
 };
