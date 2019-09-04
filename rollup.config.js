@@ -8,9 +8,13 @@ module.exports = {
   input: 'src/index.js',
   output: [
     {
-      file: 'dist/bundle.js',
-      format: 'esm'
-    }
+      file: 'dist/bundle.cjs.js',
+      format: 'cjs',
+    },
+    {
+      file: 'dist/bundle.esm.js',
+      format: 'esm',
+    },
   ],
   plugins: [
     scss(),
@@ -19,14 +23,10 @@ module.exports = {
     }),
     babel({
       exclude: 'node_modules/**',
-      runtimeHelpers: true
+      runtimeHelpers: true,
     }),
     commonjs(),
     resolve(),
   ],
-  external: [
-    'react',
-    'react-dom',
-    'prop-types',
-  ]
-}
+  external: ['react', 'react-dom', 'prop-types'],
+};

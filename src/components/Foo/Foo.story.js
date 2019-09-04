@@ -1,8 +1,5 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Foo from './index';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Foo from "./index";
 
-storiesOf('My Demo/Foo', module)
-  .add('default', () => (
-    <Foo />
-  ))
+storiesOf("Directory 1/Foo", module).add("default", () => <Foo />);
